@@ -1,0 +1,31 @@
+[build]
+  command = "npm install && npm run build"
+  publish = "www"
+
+[dev]
+  framework = "stencil"
+  command = "stencil build --dev --watch --serve"
+  port = 8888
+  targetPort = 3333
+  publish = "www"
+  autoLaunch = true
+
+[functions]
+  node_bundler = "esbuild"
+  directory = "api"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+#[template]
+#  incoming-hooks = ["Fauna"]
+
+# [template.environment]
+#   FAUNA_SERVER_KEY = "this is your Fauna server key"

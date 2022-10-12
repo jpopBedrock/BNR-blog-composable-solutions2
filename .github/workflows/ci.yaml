@@ -1,0 +1,16 @@
+name: Continuous Integration
+on:
+  workflow_dispatch: # Manually trigger a workflow https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
+  pull_request: # Pull Requests
+jobs:
+  build:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: NPM Install
+        working-directory: ./
+        run: npm install
+      - name: Run Tests
+        working-directory: ./
+        run: npm test

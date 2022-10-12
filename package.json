@@ -1,0 +1,21 @@
+{
+  "type": "module",
+  "name": "bnr-blog-composable-solutions",
+  "description": "Why Netlify and Fauna are my foundation for composable solutions",
+  "scripts": {
+    "preinstall": "cd core && npm install && cd ..",
+    "postinstall": "cd api && npm install && cd ..",
+    "build": "netlify dev:exec stencil build",
+    "start": "netlify dev",
+    "generate": "stencil generate",
+    "test": "echo 'OK'"
+  },
+  "devDependencies": {
+    "@ionic/core": "5.3.2",
+    "@stencil/core": "2.13.0",
+    "netlify-cli": "12.0.6"
+  },
+  "dependencies": {
+    "core": "file:./core"
+  }
+}

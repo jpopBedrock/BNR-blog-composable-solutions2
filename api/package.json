@@ -1,0 +1,8 @@
+{
+  "type": "module",
+  "name": "api",
+  "description": "API via Netlify Functions",
+  "dependencies": {
+    "core": "file:./core"
+  }
+}

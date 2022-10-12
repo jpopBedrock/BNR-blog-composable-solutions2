@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "main": "index.js",
+  "name": "local-core",
+  "description": "Local core module"
+}
