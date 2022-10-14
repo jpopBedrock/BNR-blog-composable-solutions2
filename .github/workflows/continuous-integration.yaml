@@ -11,6 +11,6 @@ jobs:
       - name: NPM Install
         working-directory: ./
         run: npm install
-      - name: Run Tests
-        working-directory: ./
-        run: npm test
+      - name: Run Workflow
+        working-directory: .github/workflows/
+        run: npm run continuous-integration-workflow

@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "name": "workflows",
+  "description": "GitHub Actions Workflows",
+  "dependencies": {
+    "core": "file:../../core"
+  },
+  "scripts": {
+    "continuous-integration-workflow": "node ./continuous-integration/workflow.js"
+  }
+}

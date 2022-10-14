@@ -8,10 +8,12 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface AppHome {
     }
-    interface AppProfile {
-        "name": string;
+    interface AppRandom {
+        "type": string;
     }
     interface AppRoot {
+    }
+    interface AppStores {
     }
 }
 declare global {
@@ -21,11 +23,11 @@ declare global {
         prototype: HTMLAppHomeElement;
         new (): HTMLAppHomeElement;
     };
-    interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {
+    interface HTMLAppRandomElement extends Components.AppRandom, HTMLStencilElement {
     }
-    var HTMLAppProfileElement: {
-        prototype: HTMLAppProfileElement;
-        new (): HTMLAppProfileElement;
+    var HTMLAppRandomElement: {
+        prototype: HTMLAppRandomElement;
+        new (): HTMLAppRandomElement;
     };
     interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
     }
@@ -33,24 +35,34 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLAppStoresElement extends Components.AppStores, HTMLStencilElement {
+    }
+    var HTMLAppStoresElement: {
+        prototype: HTMLAppStoresElement;
+        new (): HTMLAppStoresElement;
+    };
     interface HTMLElementTagNameMap {
         "app-home": HTMLAppHomeElement;
-        "app-profile": HTMLAppProfileElement;
+        "app-random": HTMLAppRandomElement;
         "app-root": HTMLAppRootElement;
+        "app-stores": HTMLAppStoresElement;
     }
 }
 declare namespace LocalJSX {
     interface AppHome {
     }
-    interface AppProfile {
-        "name"?: string;
+    interface AppRandom {
+        "type"?: string;
     }
     interface AppRoot {
     }
+    interface AppStores {
+    }
     interface IntrinsicElements {
         "app-home": AppHome;
-        "app-profile": AppProfile;
+        "app-random": AppRandom;
         "app-root": AppRoot;
+        "app-stores": AppStores;
     }
 }
 export { LocalJSX as JSX };
@@ -58,8 +70,9 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
-            "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
+            "app-random": LocalJSX.AppRandom & JSXBase.HTMLAttributes<HTMLAppRandomElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "app-stores": LocalJSX.AppStores & JSXBase.HTMLAttributes<HTMLAppStoresElement>;
         }
     }
 }

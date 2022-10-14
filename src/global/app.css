@@ -29,3 +29,61 @@
   More info about color theming using Ionic:
   https://ionicframework.com/docs/theming/color-generator
 */
+
+:root {
+  --ion-color-primary: #00ad9f;
+  --ion-color-primary-rgb: 0, 173, 159;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #00988c;
+  --ion-color-primary-tint: #1ab5a9;
+
+  --ion-color-secondary: #492fb1;
+  --ion-color-secondary-rgb: 73, 47, 177;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #40299c;
+  --ion-color-secondary-tint: #5b44b9;
+
+  --ion-color-tertiary: #f6bc00;
+  --ion-color-tertiary-rgb: 246, 188, 0;
+  --ion-color-tertiary-contrast: #000000;
+  --ion-color-tertiary-contrast-rgb: 0, 0, 0;
+  --ion-color-tertiary-shade: #d8a500;
+  --ion-color-tertiary-tint: #f7c31a;
+
+  --ion-color-success: #00c7b7;
+  --ion-color-success-rgb: 0, 199, 183;
+  --ion-color-success-contrast: #000000;
+  --ion-color-success-contrast-rgb: 0, 0, 0;
+  --ion-color-success-shade: #00afa1;
+  --ion-color-success-tint: #1acdbe;
+
+  --ion-color-warning: #dba800;
+  --ion-color-warning-rgb: 219, 168, 0;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #c19400;
+  --ion-color-warning-tint: #dfb11a;
+
+  --ion-color-danger: #fa3946;
+  --ion-color-danger-rgb: 250, 57, 70;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #dc323e;
+  --ion-color-danger-tint: #fb4d59;
+
+  --ion-color-medium: #a3a9ac;
+  --ion-color-medium-rgb: 163, 169, 172;
+  --ion-color-medium-contrast: #000000;
+  --ion-color-medium-contrast-rgb: 0, 0, 0;
+  --ion-color-medium-shade: #8f9597;
+  --ion-color-medium-tint: #acb2b4;
+
+  --ion-color-light: #f7f8f8;
+  --ion-color-light-rgb: 247, 248, 248;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d9dada;
+  --ion-color-light-tint: #f8f9f9;
+}

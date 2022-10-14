@@ -24,8 +24,5 @@
   to = "/index.html"
   status = 200
 
-#[template]
-#  incoming-hooks = ["Fauna"]
-
-# [template.environment]
-#   FAUNA_SERVER_KEY = "this is your Fauna server key"
+[template.environment]
+  FAUNA_SERVER_KEY = "Replace with generated Fauna Server Key"

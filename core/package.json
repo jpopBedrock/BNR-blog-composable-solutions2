@@ -2,5 +2,8 @@
   "type": "module",
   "main": "index.js",
   "name": "local-core",
-  "description": "Local core module"
+  "description": "Local core module",
+  "dependencies": {
+    "faunadb": "4.7.0"
+  }
 }

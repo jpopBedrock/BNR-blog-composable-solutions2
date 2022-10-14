@@ -4,7 +4,7 @@
   "description": "Why Netlify and Fauna are my foundation for composable solutions",
   "scripts": {
     "preinstall": "cd core && npm install && cd ..",
-    "postinstall": "cd api && npm install && cd ..",
+    "postinstall": "cd api && npm install && cd .. && cd .github/workflows && npm install && cd ../..",
     "build": "netlify dev:exec stencil build",
     "start": "netlify dev",
     "generate": "stencil generate",
