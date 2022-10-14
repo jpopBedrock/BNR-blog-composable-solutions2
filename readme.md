@@ -6,22 +6,64 @@ Create a Fauna database with sample data, generate a Fauna Server Key, and confi
 
 1. Sign up for a free [Fauna Account](https://dashboard.fauna.com/accounts/register).
 2. Create a new Fauna Database from the [Fauna Dashboard](https://dashboard.fauna.com/) giving it a name, selecting a region, and checking the box for `Use demo data`.
+
+   ![Fauna Create Database use Demo Data](screenshots/fauna-create-database-use-demo-data.png)
+
 3. Navigate into your new database and to the `Security` section using the navigation on the left side.
 4. From the `Security > Keys` page click `New Key` to generate a new Fauna Server Key.
-5. The Fauna Server Key will be displayed and you will need this value in the next section so keep it on the page or copy it somewhere safe.
+
+   ![Fauna Create Server Key](screenshots/fauna-create-server-key.png)
+
+5. The Fauna Server Key will be displayed and you will need this value in the next section so keep this page open or copy it somewhere safe.
+
+   ![Fauna Server Key Secret](screenshots/fauna-server-key-secret.png)
 
 ## Netlify
 
 1. Sign up for a free [Netlify Account](https://app.netlify.com/signup).
 2. Click the `Deploy to Netlify` button below:
+
    [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/BNR-Developer-Sandbox/BNR-blog-composable-solutions)
-3. When prompted for the Netlify Environment Variable `FAUNA_SERVER_KEY` enter the value from Fauna generated in the previous section.
-4. Netlify will build and deploy your new Netlify Site with a custom subdomain under `netlify.app`.
+
+3. Click `Connect to GitHub` and grant any authorizations needed.
+
+   ![Netlify Connect to GitHub](screenshots/netlify-connect-to-github.png)
+
+4. Configure your site by entering your Fauna Server Key generated in the previous section in the field labeled `Replace with generated Fauna Server Key`.
+
+   ![Netlify Configure your Site](screenshots/netlify-configure-your-site.png)
+
+5. Click `Save & Deploy`
+6. Netlify will build and deploy your new Netlify Site with a custom subdomain under `netlify.app`.
+7. In Netlify, navigate to `Site settings > Build & deploy > Environment > Environment variables` to find where your `FAUNA_SERVER_KEY` was saved.
+
+   ![Netlify Environment Variables](screenshots/netlify-environment-variables.png)
 
 ## GitHub Actions
 
-1. TODO Fork this repository???
-2. TODO Add GitHub Actions Secret `FAUNA_SERVER_KEY` with generated Fanua Server Key value.
+Your repository must be hosted on GitHub in order to use [GitHub Actions](https://docs.github.com/en/actions).
+GitHub looks for GitHub Actions workflows in the `.github/workflows/` directory.
+
+1. Go to your GitHub and find your new repository.
+2. Navigate to the `Settings` tab.
+3. Expand the `Secrets` options from the left side menu.
+4. Click `Actions` to navigate to the `Actions secrets` page.
+5. Click `New repository secret` to create new secret.
+
+   ![GitHub Actions New repository secret](screenshots/github-actions-new-secret.png)
+
+6. Enter `FAUNA_SERVER_KEY` as the secret name, enter your Fauna Server Key in the secret field, and click `Add secret`.
+7. You will now see your new repository secret listed on the `Action secrets` page.
+
+   ![GitHub Actions New repository secret](screenshots/github-actions-repository-secrets.png)
+
+8. Navigate to the `Actions` tab to view all workflows.
+9. Click on the `Continuous Integration` workflow in the left side navigation to go to the Continuous Integrations workflow page.
+10. Expand the `Run workflow` dropdown and click the `Run workflow` button.
+
+    ![GitHub Actions Continuous Integration](screenshots/github-actions-continuous-integration.png)
+
+11. Your workflow run will be queued and begin running. Click through to view details on the GitHub actions job run.
 
 # Local Development
 
@@ -29,11 +71,6 @@ Create a Fauna database with sample data, generate a Fauna Server Key, and confi
 2. Login to Netlify with `npx netlify login`
 3. Link your Netlify Site `npx netlify link`
 4. Start the local development server `npm start`
-
-## GitHub Actions
-
-Your repository must be hosted on GitHub in order for the [GitHub Actions](https://docs.github.com/en/actions) to work.
-GitHub looks for GitHub Actions workflows in the `.github/workflows/` directory.
 
 ## Netlify
 
