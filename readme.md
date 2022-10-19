@@ -1,6 +1,22 @@
+This is a starter repository uses Netlify, Fauna, GitHub Actions, Stencil, and a local shared module as an example composable solution to build from.
+
+# TL;DR
+
+You'll need Fauna and Netlify accounts, a Fauna database created with sample data, and a Fauna Server Key for your database.
+
+If you have all that ready, then click the deploy to Netlify button below:
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/BNR-Developer-Sandbox/BNR-blog-composable-solutions)
+
+# Demo Site
+
+You can find a demo of this starter repository at [https://bnr-blog-composable-solutions.netlify.app/](https://bnr-blog-composable-solutions.netlify.app/).
+Follow the instruction in the Getting Started section below to deploy your own copy of this demo site.
+
 # Getting Started
 
-Create a Fauna database with sample data, generate a Fauna Server Key, and configure an Environment Variable in Netlify with your Fauna Server Key.
+Follow these step-by-step instructions to create a Fauna database with sample data, generate a Fauna Server Key, and configure an Environment Variable in Netlify with your Fauna Server Key.
+At the end of this process you'll have your own copy of this repository deployed to Netlify and reading from your own Fauna database.
 
 ## Fauna
 
@@ -21,11 +37,8 @@ Create a Fauna database with sample data, generate a Fauna Server Key, and confi
 ## Netlify
 
 1. Sign up for a free [Netlify Account](https://app.netlify.com/signup).
-2. Click the `Deploy to Netlify` button below:
-
-   [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/BNR-Developer-Sandbox/BNR-blog-composable-solutions)
-
-3. Click `Connect to GitHub` and grant any authorizations needed.
+2. Initiate the [Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/BNR-Developer-Sandbox/BNR-blog-composable-solutions) of this starter repository.
+3. On Netlify, click `Connect to GitHub` and grant any authorizations needed.
 
    ![Netlify Connect to GitHub](screenshots/netlify-connect-to-github.png)
 
@@ -44,7 +57,7 @@ Create a Fauna database with sample data, generate a Fauna Server Key, and confi
 Your repository must be hosted on GitHub in order to use [GitHub Actions](https://docs.github.com/en/actions).
 GitHub looks for GitHub Actions workflows in the `.github/workflows/` directory.
 
-1. Go to your GitHub and find your new repository.
+1. Go to GitHub and find your new repository.
 2. Navigate to the `Settings` tab.
 3. Expand the `Secrets` options from the left side menu.
 4. Click `Actions` to navigate to the `Actions secrets` page.
@@ -80,7 +93,10 @@ GitHub looks for GitHub Actions workflows in the `.github/workflows/` directory.
 ## Stencil
 
 [Stencil](https://stenciljs.com/docs/introduction) is a compiler for Web Components / Custom Elements.
-[Custom Elements Everywhere](https://custom-elements-everywhere.com/) is a website that tests and documents the interoperability of Custom Elements with other web frameworks.
+Stencil can be used to create a component library or an application.
+This starter repository is a Stencil application.
+
+The interoperability of Custom Elements with other web frameworks is documented and tested on [Custom Elements Everywhere](https://custom-elements-everywhere.com/).
 
 ## Local Shared Module
 
@@ -91,22 +107,23 @@ Search the code base for [import core from 'core/index.js'](https://github.com/B
 
 # Scaffolding
 
-This project was scaffolding using the Stencil and Netlify CLIs.
+Wondering how this starter repository was created?
+The following subsections briefly describe how this starter repository was scaffolded using the Stencil CLI and the Netlify CLI with links to further documentation.
 
 ## Stencil Initialization
 
 [Stencil: Getting Started - Starting a new project](https://stenciljs.com/docs/getting-started)
 
-Stencil was initialized with `npm init stencil` using the `ionic-pwa` starter.
+The Stencil application was initialized using `npm init stencil` and selecting the `ionic-pwa` starter.
 
 ## Netlify CLI Installation
 
 [Netilfy CLI: Getting Started - Installation in a CI environment](https://docs.netlify.com/cli/get-started/#automated-setup)
 
-Netlify CLI was installed locally with `npm install netlify-cli --save-dev`.
+The Netlify CLI was installed locally using `npm install netlify-cli --save-dev`.
 
 ## Netilfy CLI Initialization
 
 [Netilfy CLI: Getting Started - Automated setup](https://docs.netlify.com/cli/get-started/#automated-setup)
 
-Netlify CLI was initialized with `npx netlify-cli init`.
+The Netlify configuration was initialized using `npx netlify-cli init`.
