@@ -15,7 +15,7 @@ export class AppHome {
       <ion-content class="ion-padding">
         <ion-grid>
           <ion-row>
-            <ion-col class="ion-wrap" size="4">
+            <ion-col class="ion-wrap" size="12" sizeMd="6">
               <ion-card>
                 <ion-card-header>
                   <ion-card-title>Composable Solutions</ion-card-title>
@@ -25,7 +25,7 @@ export class AppHome {
                 <ion-card-content>
                   <p>
                     Welcome to the Big Nerd Ranch demo on Composable Solutions for the blog post titled{' '}
-                    <ion-router-link color="secondary" href="https://bignerdranch.com/blog/composable-solutions/" target="_blank">
+                    <ion-router-link color="secondary" href="https://bignerdranch.com/blog/why-netlify-and-fauna-are-my-foundation-for-composable-solutions/" target="_blank">
                       Why Netlify and Fauna are my foundation for composable solutions
                     </ion-router-link>
                     . This is a demo of a{' '}
@@ -38,7 +38,7 @@ export class AppHome {
               </ion-card>
             </ion-col>
 
-            <ion-col class="ion-wrap" size="4">
+            <ion-col class="ion-wrap" size="12" sizeMd="6">
               <ion-card>
                 <ion-card-header>
                   <ion-card-title>Shared Module</ion-card-title>
