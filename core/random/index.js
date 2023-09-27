@@ -1,6 +1,6 @@
 const number = () => {
   // random number 1-100
-  return Math.floor(Math.random() * 1000) + 1;
+  return Math.floor(Math.random() * 10) + 1;
 };
 
 const letter = () => {
